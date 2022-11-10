@@ -14,6 +14,7 @@ const HomeSection1 = () => {
                 <img className="d-block" src={x} alt="First slide"/>
                 <img className="d-block" src={y} alt="First slide"/>
                 <img className="d-block" src={z} alt="First slide"/>
+                
             </div>
         </div>
     );
