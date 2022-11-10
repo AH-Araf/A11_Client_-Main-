@@ -2,6 +2,7 @@ import React from 'react';
 
 const AllReview = ({x}) => {
 
+    
 
     const { _id, serviceName, customar, email, review, yourPhotoURL, status } = x;
     console.log(x)
