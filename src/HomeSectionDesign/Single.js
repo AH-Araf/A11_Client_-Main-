@@ -24,6 +24,28 @@ const Single = () => {
     }, [_id])
 
 
+    // const handleGoogleSignIn = () => {
+    //     providerLogin(googleProvider)
+    //         .then(result => {
+    //             const user = result.user;
+    //             console.log(user);
+    //             navigate(from, {replace: true});
+    //         })
+    //         .catch(error => console.error(error))
+    // }
+
+   
+
+
+    const abc = () =>{
+        if(user?.uid){
+            <Link className='blog-container' to={`/reviewPrivate/${_id}`}>Click Here To Add Your Review</Link>
+            // alert('Success')
+        }
+        else{
+            alert('Please Login to add Review')
+        }
+    }
 
 
     return (
@@ -56,7 +78,8 @@ const Single = () => {
             </div>
 
             <div className='d-grid justify-content-center'>
-                <Link className='blog-container' to={`/reviewPrivate/${_id}`}>Click Here To Add Your Review</Link>
+                <Link onClick={abc} className='blog-container' to={`/reviewPrivate/${_id}`}>Click Here To Add Your Review</Link>
+                {/* <button onClick={abc} to={`/reviewPrivate/${_id}`}>X</button> */}
             </div>
         </div>
     );
