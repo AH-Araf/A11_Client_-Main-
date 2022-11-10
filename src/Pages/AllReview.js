@@ -4,7 +4,7 @@ const AllReview = ({x}) => {
 
 
 
-    const { _id, serviceName, customar,  review, yourPhotoURL, status } = x;
+    const { _id, serviceName, customar,  review, yourPhotoURL } = x;
     console.log(x)
     return (
         <div className='review-container'>
