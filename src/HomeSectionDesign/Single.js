@@ -40,7 +40,6 @@ const Single = () => {
             <p className='mb-5'>Description: {Description}</p>
             
 
-
             <div className='Review'>
                 <h2 className='bg-success p-3  d-grid justify-content-center'>REVIEW SECTION</h2>
             </div> 
