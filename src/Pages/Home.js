@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import HomeSection1 from '../HomeSectionDesign/HomeSection1';
 import HomeService from '../HomeSectionDesign/HomeService';
 import ImageSlider from '../HomeSectionDesign/ImageSlider';
 import SlideWriting from '../HomeSectionDesign/SlideWriting';
@@ -21,6 +22,10 @@ const Home = () => {
                 }
             </div>
             <Link className='blog-container d-grid justify-content-center p-2 m-5' to='/all'>See all services</Link>  
+
+            <div className='m-5'>
+                <HomeSection1></HomeSection1>
+            </div>
         </div>
     );
 };

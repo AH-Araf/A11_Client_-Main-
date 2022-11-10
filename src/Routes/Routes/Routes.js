@@ -8,6 +8,7 @@ import Home from "../../Pages/Home";
 import Login from "../../Pages/Login";
 import MyReview from "../../Pages/MyReview";
 import Register from "../../Pages/Register";
+import ReviewPrivateRoute from "../../Pages/ReviewPrivateRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
@@ -53,6 +54,11 @@ export const routes = createBrowserRouter([
                 path:'/myReview',
                 element: <PrivateRoute><MyReview></MyReview></PrivateRoute>,
             },      
+            {
+                path:'/reviewPrivate/:id',
+                element: <PrivateRoute><ReviewPrivateRoute></ReviewPrivateRoute></PrivateRoute>,
+                loader: async ({params}) =>  fetch(`http://localhost:5000/services/${params.id}`)
+            },   
         ]
     },
     {path: '*', element: <div><h1>404 Not Found Your Data</h1></div>}
