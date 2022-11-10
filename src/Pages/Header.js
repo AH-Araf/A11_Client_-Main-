@@ -34,7 +34,6 @@ const Header = () => {
                         {/* <Link className='blog-container' to='/login'>Login</Link>  
                         <Link className='blog-container' to='/register'>Register</Link>  */}
                         {/* <Link className='blog-container' to='/addservices'>Add Services</Link>   */}
-                        
                     </Nav>
                     <Nav>
                         <>
