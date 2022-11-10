@@ -21,6 +21,7 @@ const Home = () => {
                     </HomeService>)
                 }
             </div>
+            
             <Link className='blog-container d-grid justify-content-center p-2 m-5' to='/all'>See all services</Link>  
 
             <div className='m-5'>
