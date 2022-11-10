@@ -70,6 +70,16 @@ const Single = () => {
 
             <div>
             {
+                review.length===0?
+                    <>
+                        <h2 className='bg-danger d-grid justify-content-center p-5'>No reviews were added</h2>
+                    </>
+                    :
+                    <>
+                        
+                    </>
+                }
+            {
                             review.map(x => <AllReview
                                 key={x._id}
                                 x={x}
