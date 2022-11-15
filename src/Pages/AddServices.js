@@ -16,8 +16,6 @@ const AddServices = () => {
             Price,
             Description,
         }
-        // console.log(order)
-
         fetch('https://b-assignment-11-server.vercel.app/services', {
             method: 'POST',
             headers: {
@@ -25,7 +23,6 @@ const AddServices = () => {
             },
             body: JSON.stringify(order)
         })
-
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -36,8 +33,6 @@ const AddServices = () => {
             }
         })
         .catch(er => console.error(er));
-
-
     }
 
     return (

@@ -7,12 +7,8 @@ const ReviewPrivateRoute = () => {
     const a = useLoaderData();
     const {ServiceName, ImageURL, Price, Description, _id } = a;
 
-
     //Auth User
     const { user } = useContext(AuthContext);
-
-
-
     //Adding Review
     const handleAddReview = event =>{
         event.preventDefault();
@@ -21,8 +17,8 @@ const ReviewPrivateRoute = () => {
         const email = form.email.value;
         const review = form.review.value;
         const yourPhotoURL = form.yourImgURL.value;
-        
 
+        
         const rev = {
             service: _id,
             serviceName: ServiceName,
@@ -31,7 +27,6 @@ const ReviewPrivateRoute = () => {
             review,
             yourPhotoURL
         }
-
 
         fetch('https://b-assignment-11-server.vercel.app/reviews', {
             method: 'POST',

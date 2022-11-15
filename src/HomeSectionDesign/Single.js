@@ -10,11 +10,9 @@ const Single = () => {
     //Service Information
     const a = useLoaderData();
     const {ServiceName, ImageURL, Price, Description, _id } = a;
-    // console.log(a);
 
     //Auth User
     const { user } = useContext(AuthContext);
-
 
     const [review, setreview] = useState([])
     useEffect(() => {
@@ -22,20 +20,6 @@ const Single = () => {
             .then(res => res.json())
             .then(data => setreview(data))
     }, [_id])
-
-
-    // const handleGoogleSignIn = () => {
-    //     providerLogin(googleProvider)
-    //         .then(result => {
-    //             const user = result.user;
-    //             console.log(user);
-    //             navigate(from, {replace: true});
-    //         })
-    //         .catch(error => console.error(error))
-    // }
-
-   
-
 
     const abc = () =>{
         if(user?.uid){
@@ -46,8 +30,7 @@ const Single = () => {
             alert('Please Login to add Review')
         }
     }
-
-
+    
     return (
         <div className='single-course-container review-detail'>
             <h4>{ServiceName}</h4>
@@ -60,13 +43,10 @@ const Single = () => {
                 </PhotoProvider>
             <h5>Price: ${Price}</h5>
             <p className='mb-5'>Description: {Description}</p>
-            
-
+        
             <div className='Review'>
                 <h2 className='bg-success p-3  d-grid justify-content-center'>REVIEW SECTION</h2>
-            </div> 
-
-            
+            </div>            
 
             <div>
             {

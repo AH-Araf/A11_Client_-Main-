@@ -17,7 +17,7 @@ const SeeAllServices = () => {
                     </All>)
                 }
             </div>
-            <Link className='blog-container d-grid justify-content-center p-2 m-5' to='/all'>See all services</Link>  
+            {/* <Link className='blog-container d-grid justify-content-center p-2 m-5' to='/all'>See all services</Link>   */}
         </div>
     );
 };

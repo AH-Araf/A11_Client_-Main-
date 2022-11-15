@@ -32,7 +32,6 @@ const MyReview = () => {
             })
         }
     }
-
     const handleStatusUpdate = id => {
         fetch(`https://b-assignment-11-server.vercel.app/reviews/${id}`, {
             method: 'PATCH', 
@@ -48,7 +47,6 @@ const MyReview = () => {
                 const remaining = review.filter(odr => odr._id !== id);
                 const approving = review.find(odr => odr._id === id);
                 approving.status = 'Approved'
-
                 const newOrders = [approving, ...remaining];
                 setreview(newOrders);
             }
@@ -57,6 +55,7 @@ const MyReview = () => {
     
 
 
+    
 
     return (
         <div>
